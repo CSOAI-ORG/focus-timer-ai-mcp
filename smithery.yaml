@@ -1,10 +1,5 @@
 name: focus-timer-ai-mcp
-description: "MEOK AI Labs — Focus Timer tools for AI agents and LLMs"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/focus-timer-ai-mcp
-license: MIT
-categories: [Productivity, Time Management]
-tags: [focus-timer, pomodoro, time-management, productivity-timer, deep-work]
-runtime: python
-entrypoint: server.py
+description: Run deep-focus timers with distraction logging and daily focus score
+  calculations.
+version: 1.0.0
+tools: []
