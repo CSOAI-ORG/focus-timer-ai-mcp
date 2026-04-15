@@ -1,7 +1,7 @@
 {
   "name": "focus-timer-ai-mcp",
   "version": "1.0.0",
-  "description": "MEOK AI Labs — focus timer MCP Server",
+  "description": "Focus Timer Ai automation via MCP. Includes start focus, pause focus, resume focus. By MEOK AI Labs.",
   "main": "server.py",
   "mcp": {
     "name": "focus timer",
@@ -9,10 +9,22 @@
     "homepage": "https://meok.ai",
     "repository": "https://github.com/CSOAI-ORG/focus-timer-ai-mcp",
     "runtime": "python",
-    "tags": ["mcp", "mcp-server", "meok-ai-labs", "ai-tools"]
+    "tags": [
+      "mcp",
+      "mcp-server",
+      "meok-ai-labs",
+      "ai-tools"
+    ]
   },
-  "keywords": ["mcp", "mcp-server", "meok-ai-labs"],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "meok-ai-labs"
+  ],
   "author": "MEOK AI Labs <nicholas@meok.ai>",
   "license": "MIT",
-  "repository": {"type": "git", "url": "https://github.com/CSOAI-ORG/focus-timer-ai-mcp"}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/focus-timer-ai-mcp"
+  }
 }

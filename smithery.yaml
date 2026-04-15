@@ -1,5 +1,6 @@
 name: focus-timer-ai-mcp
-description: Pomodoro-style focus timers with productivity tracking.
+description: Focus Timer Ai automation via MCP. Includes start focus, pause focus,
+  resume focus. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: start_focus
