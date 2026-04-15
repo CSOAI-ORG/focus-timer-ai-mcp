@@ -1,4 +1,28 @@
 name: focus-timer-ai-mcp
 description: MEOK AI Labs MCP Server
 version: 1.0.0
-tools: []
+tools:
+- name: start_focus
+  description: Start a new focus timer session
+  parameters: []
+- name: pause_focus
+  description: Pause the current focus session
+  parameters: []
+- name: resume_focus
+  description: Resume a paused focus session
+  parameters: []
+- name: end_focus
+  description: End a focus session early
+  parameters: []
+- name: get_sessions
+  description: Get all focus sessions with stats
+  parameters: []
+- name: get_analytics
+  description: Get productivity analytics
+  parameters: []
+- name: update_settings
+  description: Update timer settings
+  parameters: []
+- name: start_break
+  description: Start a break timer
+  parameters: []
