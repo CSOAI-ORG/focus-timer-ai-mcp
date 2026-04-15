@@ -1,28 +1,70 @@
 name: focus-timer-ai-mcp
-description: MEOK AI Labs MCP Server
+description: Pomodoro-style focus timers with productivity tracking.
 version: 1.0.0
 tools:
 - name: start_focus
   description: Start a new focus timer session
-  parameters: []
+  parameters:
+  - name: minutes
+    type: integer
+    required: false
+  - name: task
+    type: string
+    required: false
 - name: pause_focus
   description: Pause the current focus session
-  parameters: []
+  parameters:
+  - name: session_id
+    type: string
+    required: true
 - name: resume_focus
   description: Resume a paused focus session
-  parameters: []
+  parameters:
+  - name: session_id
+    type: string
+    required: true
 - name: end_focus
   description: End a focus session early
-  parameters: []
+  parameters:
+  - name: session_id
+    type: string
+    required: true
+  - name: completed
+    type: boolean
+    required: false
 - name: get_sessions
   description: Get all focus sessions with stats
-  parameters: []
+  parameters:
+  - name: date
+    type: string
+    required: false
+  - name: limit
+    type: integer
+    required: false
 - name: get_analytics
   description: Get productivity analytics
-  parameters: []
+  parameters:
+  - name: period
+    type: string
+    required: false
 - name: update_settings
   description: Update timer settings
-  parameters: []
+  parameters:
+  - name: work_duration
+    type: integer
+    required: false
+  - name: short_break
+    type: integer
+    required: false
+  - name: long_break
+    type: integer
+    required: false
 - name: start_break
   description: Start a break timer
-  parameters: []
+  parameters:
+  - name: break_type
+    type: string
+    required: false
+  - name: custom_minutes
+    type: integer
+    required: false

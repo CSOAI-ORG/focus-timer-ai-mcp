@@ -1,6 +1,6 @@
 {
   "name": "focus-timer-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Pomodoro-style focus timers with productivity tracking.",
   "version": "1.0.0",
   "tools": [
     {
@@ -8,7 +8,14 @@
       "description": "Start a new focus timer session",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "minutes": {
+            "type": "integer"
+          },
+          "task": {
+            "type": "string"
+          }
+        },
         "required": []
       }
     },
@@ -17,8 +24,14 @@
       "description": "Pause the current focus session",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "session_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "session_id"
+        ]
       }
     },
     {
@@ -26,8 +39,14 @@
       "description": "Resume a paused focus session",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "session_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "session_id"
+        ]
       }
     },
     {
@@ -35,8 +54,17 @@
       "description": "End a focus session early",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "session_id": {
+            "type": "string"
+          },
+          "completed": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "session_id"
+        ]
       }
     },
     {
@@ -44,7 +72,14 @@
       "description": "Get all focus sessions with stats",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
         "required": []
       }
     },
@@ -53,7 +88,11 @@
       "description": "Get productivity analytics",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "period": {
+            "type": "string"
+          }
+        },
         "required": []
       }
     },
@@ -62,7 +101,17 @@
       "description": "Update timer settings",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "work_duration": {
+            "type": "integer"
+          },
+          "short_break": {
+            "type": "integer"
+          },
+          "long_break": {
+            "type": "integer"
+          }
+        },
         "required": []
       }
     },
@@ -71,7 +120,14 @@
       "description": "Start a break timer",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "break_type": {
+            "type": "string"
+          },
+          "custom_minutes": {
+            "type": "integer"
+          }
+        },
         "required": []
       }
     }
