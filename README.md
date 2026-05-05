@@ -1,92 +1,38 @@
-# Focus Timer Ai
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Pomodoro-style focus timers with productivity tracking.
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/focus-timer-ai-mcp)](https://github.com/CSOAI-ORG/focus-timer-ai-mcp/stargazers)
 
-MEOK AI Labs — focus-timer-ai-mcp MCP Server. Pomodoro-style focus timers with productivity tracking.
+# ufocusU timerU aiU mcp
+
+**MEOK AI Labs — focus-timer-ai-mcp MCP Server. Pomodoro-style focus timers with productivity tracking.**
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/focus-timer-ai-mcp)](https://www.npmjs.com/package/@meok-ai/focus-timer-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/focus-timer-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install focus-timer-ai-mcp
+# or
+npm install -g @meok-ai/focus-timer-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-# Run standalone
-python server.py
+See the project repository for full documentation and examples.
 
-# Or via MCP
-mcp install focus-timer-ai-mcp
-```
+## Enterprise Support
 
-## Tools
-
-### `start_focus`
-Start a new focus timer session
-
-**Parameters:**
-- `minutes` (int)
-- `task` (str)
-
-### `pause_focus`
-Pause the current focus session
-
-**Parameters:**
-- `session_id` (str)
-
-### `resume_focus`
-Resume a paused focus session
-
-**Parameters:**
-- `session_id` (str)
-
-### `end_focus`
-End a focus session early
-
-**Parameters:**
-- `session_id` (str)
-- `completed` (bool)
-
-### `get_sessions`
-Get all focus sessions with stats
-
-**Parameters:**
-- `date` (str)
-- `limit` (int)
-
-### `get_analytics`
-Get productivity analytics
-
-**Parameters:**
-- `period` (str)
-
-### `update_settings`
-Update timer settings
-
-**Parameters:**
-- `work_duration` (int)
-- `short_break` (int)
-- `long_break` (int)
-
-### `start_break`
-Start a break timer
-
-**Parameters:**
-- `break_type` (str)
-- `custom_minutes` (int)
-
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
-
-## Links
-
-- **Website**: [meok.ai](https://meok.ai)
-- **GitHub**: [CSOAI-ORG/focus-timer-ai-mcp](https://github.com/CSOAI-ORG/focus-timer-ai-mcp)
-- **PyPI**: [pypi.org/project/focus-timer-ai-mcp](https://pypi.org/project/focus-timer-ai-mcp/)
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
