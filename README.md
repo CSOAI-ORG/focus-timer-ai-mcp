@@ -1,45 +1,62 @@
-[![focus-timer-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/focus-timer-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/focus-timer-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/focus-timer-ai-mcp)](https://pypi.org/project/focus-timer-ai-mcp/)
-
-[![focus-timer-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/focus-timer-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/focus-timer-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/focus-timer-ai-mcp)](https://github.com/CSOAI-ORG/focus-timer-ai-mcp/stargazers)
+# Focus Timer Ai MCP
 
-# ufocusU timerU aiU mcp
+**MCP server for focus timer ai mcp operations**
 
-**MEOK AI Labs — focus-timer-ai-mcp MCP Server. Pomodoro-style focus timers with productivity tracking.**
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/focus-timer-ai-mcp)](https://www.npmjs.com/package/@meok-ai/focus-timer-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-focus-timer-ai-mcp)](https://pypi.org/project/meok-focus-timer-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/focus-timer-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Focus Timer Ai MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `start_focus` | Start a new focus timer session |
+| `pause_focus` | Pause the current focus session |
+| `resume_focus` | Resume a paused focus session |
+| `end_focus` | End a focus session early |
+| `get_sessions` | Get all focus sessions with stats |
+| `get_analytics` | Get productivity analytics |
+| `update_settings` | Update timer settings |
+| `start_break` | Start a break timer |
 
 ## Installation
 
 ```bash
-pip install focus-timer-ai-mcp
-# or
-npm install -g @meok-ai/focus-timer-ai-mcp
+pip install meok-focus-timer-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "focus-timer-ai": {
+      "command": "python",
+      "args": ["-m", "meok_focus_timer_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 8 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/focus-timer-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
