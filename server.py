@@ -7,10 +7,18 @@ from typing import Any
 import uuid
 import sys, os
 
-sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
 from auth_middleware import check_access
 from mcp.server.fastmcp import FastMCP
 from collections import defaultdict
+
+STRIPE_199 = "https://buy.stripe.com/00wfZjcgAeUW4c5cyQ8k90K"
+
+def _add_upgrade_tail(response, tier="free"):
+    """Append upgrade nudge to free-tier success responses."""
+    if isinstance(response, dict) and tier == "free":
+        response["_upgrade_note"] = "Pro tier: unlimited calls + priority support. Upgrade: " + STRIPE_199
+    return response
+
 
 FREE_DAILY_LIMIT = 15
 _usage = defaultdict(list)
@@ -78,7 +86,7 @@ def start_focus(minutes: int = 0, task: str = "Untitled session", api_key: str =
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl(): return err
 
     session_id = create_session_id()
@@ -150,7 +158,7 @@ def pause_focus(session_id: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl(): return err
 
     for s in _store["sessions"]:
@@ -201,7 +209,7 @@ def resume_focus(session_id: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl(): return err
 
     for s in _store["sessions"]:
@@ -253,7 +261,7 @@ def end_focus(session_id: str, completed: bool = False, api_key: str = "") -> st
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl(): return err
 
     for s in _store["sessions"]:
@@ -318,7 +326,7 @@ def get_sessions(date: str = "", limit: int = 10, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl(): return err
 
     sessions = _store["sessions"][-limit:]
@@ -368,7 +376,7 @@ def get_analytics(period: str = "week", api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl(): return err
 
     now = datetime.now()
@@ -445,7 +453,7 @@ def update_settings(work_duration: int = 0, short_break: int = 0, long_break: in
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl(): return err
 
     settings = _store["settings"]
@@ -499,7 +507,7 @@ def start_break(break_type: str = "short", custom_minutes: int = 0, api_key: str
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl(): return err
 
     minutes = custom_minutes or (
@@ -531,5 +539,8 @@ def start_break(break_type: str = "short", custom_minutes: int = 0, api_key: str
     )
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
