@@ -1,0 +1,37 @@
+{
+  "name": "focus-timer-ai-mcp",
+  "title": "Focus Timer Ai Mcp",
+  "description": "Focus Timer Ai automation via MCP. Includes start focus, pause focus, resume focus. By MEOK AI Labs.",
+  "version": "1.0.7",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "start_focus"
+    },
+    {
+      "name": "pause_focus"
+    },
+    {
+      "name": "resume_focus"
+    },
+    {
+      "name": "end_focus"
+    },
+    {
+      "name": "get_sessions"
+    },
+    {
+      "name": "get_analytics"
+    },
+    {
+      "name": "update_settings"
+    },
+    {
+      "name": "start_break"
+    }
+  ]
+}

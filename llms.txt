@@ -1,0 +1,45 @@
+# focus-timer-ai-mcp
+# **MCP server for focus timer ai mcp operations**
+
+## Install
+```bash
+pip install focus-timer-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `start_focus`
+Start a new focus timer session
+
+### `pause_focus`
+Pause the current focus session
+
+### `resume_focus`
+Resume a paused focus session
+
+### `end_focus`
+End a focus session early
+
+### `get_sessions`
+Get all focus sessions with stats
+
+### `get_analytics`
+Get productivity analytics
+
+### `update_settings`
+Update timer settings
+
+### `start_break`
+Start a break timer
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

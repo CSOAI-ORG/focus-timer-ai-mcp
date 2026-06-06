@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""MEOK AI Labs — focus-timer-ai-mcp MCP Server. Pomodoro-style focus timers with productivity tracking."""
+"""
+MEOK AI Labs — focus-timer-ai-mcp MCP Server. Pomodoro-style focus timers with productivity tracking."""
 
 import json
 from datetime import datetime, timedelta, timezone

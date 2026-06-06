@@ -1,0 +1,9 @@
+# focus-timer-ai-mcp - Auto-trigger Rules
+
+When the user asks about focus timer, use focus-timer-ai-mcp tools: start_focus, pause_focus, resume_focus, end_focus, get_sessions
+
+**MCP server for focus timer ai mcp operations**
+
+Install: `pip install focus-timer-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.
