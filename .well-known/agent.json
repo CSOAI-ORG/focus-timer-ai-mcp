@@ -1,0 +1,95 @@
+{
+  "name": "focus-timer-ai-mcp",
+  "description": "Focus Timer Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/focus-timer-ai-mcp.html",
+  "version": "1.0.7",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "start_focus",
+      "name": "Start Focus",
+      "description": "start_focus via focus-timer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "pause_focus",
+      "name": "Pause Focus",
+      "description": "pause_focus via focus-timer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "resume_focus",
+      "name": "Resume Focus",
+      "description": "resume_focus via focus-timer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "end_focus",
+      "name": "End Focus",
+      "description": "end_focus via focus-timer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_sessions",
+      "name": "Get Sessions",
+      "description": "get_sessions via focus-timer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_analytics",
+      "name": "Get Analytics",
+      "description": "get_analytics via focus-timer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "update_settings",
+      "name": "Update Settings",
+      "description": "update_settings via focus-timer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "start_break",
+      "name": "Start Break",
+      "description": "start_break via focus-timer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

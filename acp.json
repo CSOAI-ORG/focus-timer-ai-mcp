@@ -1,0 +1,26 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "focus-timer-ai-mcp",
+    "description": "Focus Timer Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.7",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "focus-timer-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "start_focus",
+      "pause_focus",
+      "resume_focus",
+      "end_focus",
+      "get_sessions",
+      "get_analytics",
+      "update_settings",
+      "start_break"
+    ]
+  }
+}
